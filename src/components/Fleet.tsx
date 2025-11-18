@@ -4,80 +4,80 @@ export function Fleet() {
   const vehicles = [
     {
       name: 'Mercedes-Benz S-Class',
-      category: 'Executive Sedan',
+      category: 'Sedan Executivo',
       image: 'https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=800',
       passengers: '3',
       luggage: '3',
       features: [
-        'Premium leather interior',
-        'Climate control',
-        'WiFi connectivity',
-        'Refreshment bar',
+        'Interior em couro premium',
+        'Controle de climatização',
+        'Conectividade WiFi',
+        'Bar de bebidas',
       ],
     },
     {
       name: 'BMW 7 Series',
-      category: 'Luxury Sedan',
+      category: 'Sedan de Luxo',
       image: 'https://images.pexels.com/photos/219622/pexels-photo-219622.jpeg?auto=compress&cs=tinysrgb&w=800',
       passengers: '3',
       luggage: '3',
       features: [
-        'Executive seating',
-        'Advanced sound system',
-        'Privacy glass',
-        'Ambient lighting',
+        'Assentos executivos',
+        'Sistema de som avançado',
+        'Vidros de privacidade',
+        'Iluminação ambiente',
       ],
     },
     {
       name: 'Mercedes-Benz V-Class',
-      category: 'Executive Van',
+      category: 'Van Executiva',
       image: 'https://images.pexels.com/photos/3802508/pexels-photo-3802508.jpeg?auto=compress&cs=tinysrgb&w=800',
       passengers: '6',
       luggage: '6',
       features: [
-        'Spacious interior',
-        'Conference setup',
-        'Multi-zone climate',
-        'Entertainment system',
+        'Interior espaçoso',
+        'Configuração para conferência',
+        'Climatização multi-zona',
+        'Sistema de entretenimento',
       ],
     },
     {
       name: 'Range Rover',
-      category: 'Luxury SUV',
+      category: 'SUV de Luxo',
       image: 'https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg?auto=compress&cs=tinysrgb&w=800',
       passengers: '4',
       luggage: '4',
       features: [
-        'All-weather capability',
-        'Premium comfort',
-        'Advanced safety',
-        'Panoramic roof',
+        'Capacidade para todas as condições',
+        'Conforto premium',
+        'Segurança avançada',
+        'Teto panorâmico',
       ],
     },
     {
       name: 'Cadillac Escalade',
-      category: 'Premium SUV',
+      category: 'SUV Premium',
       image: 'https://images.pexels.com/photos/707046/pexels-photo-707046.jpeg?auto=compress&cs=tinysrgb&w=800',
       passengers: '6',
       luggage: '5',
       features: [
-        'Spacious luxury',
-        'Advanced tech',
-        'Theater seating',
-        'Premium audio',
+        'Luxo espaçoso',
+        'Tecnologia avançada',
+        'Assentos estilo teatro',
+        'Áudio premium',
       ],
     },
     {
       name: 'Mercedes-Benz Sprinter',
-      category: 'Executive Shuttle',
+      category: 'Transporte Executivo',
       image: 'https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg?auto=compress&cs=tinysrgb&w=800',
       passengers: '14',
       luggage: '10',
       features: [
-        'Group transport',
-        'Luxury seating',
-        'WiFi & USB ports',
-        'Ample luggage space',
+        'Transporte em grupo',
+        'Assentos de luxo',
+        'WiFi e portas USB',
+        'Amplo espaço para bagagem',
       ],
     },
   ];
@@ -87,9 +87,9 @@ export function Fleet() {
       <section className="bg-slate-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="text-5xl sm:text-6xl font-bold mb-6">Our Fleet</h1>
+            <h1 className="text-5xl sm:text-6xl font-bold mb-6">Nossa Frota</h1>
             <p className="text-xl text-slate-300 leading-relaxed">
-              Experience the finest selection of luxury vehicles, meticulously maintained and equipped with premium amenities for your comfort.
+              Experimente a melhor seleção de veículos de luxo, meticulosamente mantidos e equipados com comodidades premium para o seu conforto.
             </p>
           </div>
         </div>
@@ -122,15 +122,11 @@ export function Fleet() {
                   <div className="flex items-center space-x-6 mb-6 pb-6 border-b border-slate-200">
                     <div className="flex items-center">
                       <Users className="h-5 w-5 text-slate-400 mr-2" />
-                      <span className="text-slate-600">
-                        {vehicle.passengers} Passengers
-                      </span>
+                      <span className="text-slate-600">{vehicle.passengers} Passageiros</span>
                     </div>
                     <div className="flex items-center">
                       <Briefcase className="h-5 w-5 text-slate-400 mr-2" />
-                      <span className="text-slate-600">
-                        {vehicle.luggage} Bags
-                      </span>
+                      <span className="text-slate-600">{vehicle.luggage} Bagagens</span>
                     </div>
                   </div>
                   <div className="space-y-3">
@@ -152,26 +148,20 @@ export function Fleet() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-slate-900 rounded-2xl p-12 text-center text-white">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-              All Vehicles Include
+              Todos os Veículos Incluem
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
               <div>
                 <div className="text-4xl font-bold mb-2">100%</div>
-                <div className="text-slate-300">
-                  Professional Maintenance
-                </div>
+                <div className="text-slate-300">Manutenção Profissional</div>
               </div>
               <div>
                 <div className="text-4xl font-bold mb-2">24/7</div>
-                <div className="text-slate-300">
-                  Roadside Assistance
-                </div>
+                <div className="text-slate-300">Assistência 24/7</div>
               </div>
               <div>
                 <div className="text-4xl font-bold mb-2">Full</div>
-                <div className="text-slate-300">
-                  Insurance Coverage
-                </div>
+                <div className="text-slate-300">Cobertura de Seguro Completa</div>
               </div>
             </div>
           </div>

@@ -1,23 +1,25 @@
-import { Phone, Mail, MapPin, Clock } from 'lucide-react';
-import { useState } from 'react';
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { useState } from "react";
 
 export function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    service: '',
-    date: '',
-    message: '',
+    name: "",
+    email: "",
+    phone: "",
+    service: "",
+    date: "",
+    message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    console.log("Form submitted:", formData);
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
   ) => {
     setFormData({
       ...formData,
@@ -30,9 +32,12 @@ export function Contact() {
       <section className="bg-slate-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="text-5xl sm:text-6xl font-bold mb-6">Contact Us</h1>
+            <h1 className="text-5xl sm:text-6xl font-bold mb-6">
+              Fale Conosco
+            </h1>
             <p className="text-xl text-slate-300 leading-relaxed">
-              Ready to experience luxury transportation? Get in touch with our team or book your ride today.
+              Pronto para experimentar transporte de luxo? Entre em contato com
+              nossa equipe ou reserve sua viagem hoje.
             </p>
           </div>
         </div>
@@ -44,7 +49,7 @@ export function Contact() {
             <div className="lg:col-span-2">
               <div className="bg-white rounded-xl border-2 border-slate-200 p-8">
                 <h2 className="text-3xl font-bold text-slate-900 mb-6">
-                  Request a Quote
+                  Solicitar Orçamento
                 </h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -53,7 +58,7 @@ export function Contact() {
                         htmlFor="name"
                         className="block text-sm font-semibold text-slate-900 mb-2"
                       >
-                        Full Name *
+                        Nome Completo *
                       </label>
                       <input
                         type="text"
@@ -70,7 +75,7 @@ export function Contact() {
                         htmlFor="email"
                         className="block text-sm font-semibold text-slate-900 mb-2"
                       >
-                        Email Address *
+                        Endereço de e-mail *
                       </label>
                       <input
                         type="email"
@@ -90,7 +95,7 @@ export function Contact() {
                         htmlFor="phone"
                         className="block text-sm font-semibold text-slate-900 mb-2"
                       >
-                        Phone Number *
+                        Telefone *
                       </label>
                       <input
                         type="tel"
@@ -107,7 +112,7 @@ export function Contact() {
                         htmlFor="service"
                         className="block text-sm font-semibold text-slate-900 mb-2"
                       >
-                        Service Type *
+                        Tipo de Serviço *
                       </label>
                       <select
                         id="service"
@@ -117,13 +122,15 @@ export function Contact() {
                         required
                         className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:border-slate-900 focus:outline-none transition-colors"
                       >
-                        <option value="">Select a service</option>
-                        <option value="corporate">Corporate Transportation</option>
-                        <option value="airport">Airport Transfer</option>
-                        <option value="events">Special Events</option>
-                        <option value="group">Group Transportation</option>
-                        <option value="tours">City Tours</option>
-                        <option value="hourly">Hourly Charter</option>
+                        <option value="">Selecione um serviço</option>
+                        <option value="corporate">
+                          Transporte Corporativo
+                        </option>
+                        <option value="airport">Traslado Aeroportuário</option>
+                        <option value="events">Eventos Especiais</option>
+                        <option value="group">Transporte de Grupos</option>
+                        <option value="tours">Passeios pela Cidade</option>
+                        <option value="hourly">Locação por Hora</option>
                       </select>
                     </div>
                   </div>
@@ -133,7 +140,7 @@ export function Contact() {
                       htmlFor="date"
                       className="block text-sm font-semibold text-slate-900 mb-2"
                     >
-                      Preferred Date *
+                      Data Preferida *
                     </label>
                     <input
                       type="date"
@@ -151,7 +158,7 @@ export function Contact() {
                       htmlFor="message"
                       className="block text-sm font-semibold text-slate-900 mb-2"
                     >
-                      Additional Details
+                      Detalhes Adicionais
                     </label>
                     <textarea
                       id="message"
@@ -168,7 +175,7 @@ export function Contact() {
                     type="submit"
                     className="w-full px-8 py-4 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-colors font-semibold text-lg"
                   >
-                    Submit Request
+                    Enviar Solicitação
                   </button>
                 </form>
               </div>
@@ -177,7 +184,7 @@ export function Contact() {
             <div className="space-y-8">
               <div className="bg-slate-50 rounded-xl p-8">
                 <h3 className="text-2xl font-bold text-slate-900 mb-6">
-                  Get in Touch
+                  Fale Conosco
                 </h3>
                 <div className="space-y-6">
                   <div className="flex items-start">
@@ -186,7 +193,7 @@ export function Contact() {
                     </div>
                     <div className="ml-4">
                       <div className="text-sm font-semibold text-slate-900 mb-1">
-                        Phone
+                        Telefone
                       </div>
                       <div className="text-slate-600">+1 (555) 123-4567</div>
                       <div className="text-slate-600">+1 (555) 765-4321</div>
@@ -199,10 +206,12 @@ export function Contact() {
                     </div>
                     <div className="ml-4">
                       <div className="text-sm font-semibold text-slate-900 mb-1">
-                        Email
+                        E-mail
                       </div>
-                      <div className="text-slate-600">info@elitetransport.com</div>
-                      <div className="text-slate-600">bookings@elitetransport.com</div>
+                      <div className="text-slate-600">info@vipfleet.com</div>
+                      <div className="text-slate-600">
+                        bookings@vipfleet.com
+                      </div>
                     </div>
                   </div>
 
@@ -212,11 +221,13 @@ export function Contact() {
                     </div>
                     <div className="ml-4">
                       <div className="text-sm font-semibold text-slate-900 mb-1">
-                        Location
+                        Localização
                       </div>
                       <div className="text-slate-600">
-                        123 Executive Drive<br />
-                        Suite 500<br />
+                        123 Executive Drive
+                        <br />
+                        Suite 500
+                        <br />
                         New York, NY 10001
                       </div>
                     </div>
@@ -228,10 +239,11 @@ export function Contact() {
                     </div>
                     <div className="ml-4">
                       <div className="text-sm font-semibold text-slate-900 mb-1">
-                        Hours
+                        Horário
                       </div>
                       <div className="text-slate-600">
-                        24/7 Service Available<br />
+                        24/7 Service Available
+                        <br />
                         Office: Mon-Fri, 8am-6pm
                       </div>
                     </div>
@@ -241,10 +253,11 @@ export function Contact() {
 
               <div className="bg-slate-900 rounded-xl p-8 text-white">
                 <h3 className="text-xl font-bold mb-3">
-                  Emergency Bookings
+                  Reservas de Emergência
                 </h3>
                 <p className="text-slate-300 mb-4">
-                  Need immediate assistance? Our dispatch team is available 24/7.
+                  Precisa de assistência imediata? Nossa equipe de despacho está
+                  disponível 24/7.
                 </p>
                 <div className="text-2xl font-bold">+1 (555) 999-0000</div>
               </div>

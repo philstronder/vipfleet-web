@@ -1,71 +1,77 @@
-import { Briefcase, Plane, Calendar, Users, MapPin, Clock } from 'lucide-react';
+import { Briefcase, Plane, Calendar, Users, MapPin, Clock } from "lucide-react";
 
 export function Services() {
   const services = [
     {
       icon: Briefcase,
-      title: 'Corporate Transportation',
-      description: 'Professional chauffeur services for business executives, board meetings, and corporate events.',
+      title: "Transporte Corporativo",
+      description:
+        "Serviços de chauffeur profissionais para executivos, reuniões e eventos corporativos.",
       features: [
-        'Door-to-door service',
-        'Multiple stops available',
-        'Corporate billing options',
-        'Experienced business drivers',
+        "Serviço porta a porta",
+        "Múltiplas paradas disponíveis",
+        "Opções de faturamento corporativo",
+        "Motoristas experientes para negócios",
       ],
     },
     {
       icon: Plane,
-      title: 'Airport Transfers',
-      description: 'Seamless airport pickup and drop-off with flight tracking and meet-and-greet service.',
+      title: "Traslados Aeroportuários",
+      description:
+        "Pickup e drop-off sem complicações com monitoramento de voos e serviço de recepção.",
       features: [
-        'Real-time flight monitoring',
-        'Meet and greet service',
-        'Luggage assistance',
-        'Complimentary wait time',
+        "Monitoramento de voo em tempo real",
+        "Serviço de recepção",
+        "Assistência com bagagem",
+        "Tempo de espera de cortesia",
       ],
     },
     {
       icon: Calendar,
-      title: 'Special Events',
-      description: 'Elegant transportation for weddings, galas, premieres, and other prestigious occasions.',
+      title: "Eventos Especiais",
+      description:
+        "Transporte elegante para casamentos, galas, estreias e outras ocasiões de prestígio.",
       features: [
-        'Red carpet service',
-        'Multiple vehicle options',
-        'Event coordination',
-        'Premium amenities',
+        "Serviço tapete vermelho",
+        "Múltiplas opções de veículos",
+        "Coordenação de eventos",
+        "Comodidades premium",
       ],
     },
     {
       icon: Users,
-      title: 'Group Transportation',
-      description: 'Coordinated transport solutions for corporate groups, conferences, and team events.',
+      title: "Transporte de Grupos",
+      description:
+        "Soluções de transporte coordenadas para grupos corporativos, conferências e eventos de equipe.",
       features: [
-        'Multi-vehicle coordination',
-        'Group rates available',
-        'Event planning support',
-        'Flexible scheduling',
+        "Coordenação de múltiplos veículos",
+        "Tarifas para grupos disponíveis",
+        "Suporte ao planejamento de eventos",
+        "Agendamento flexível",
       ],
     },
     {
       icon: MapPin,
-      title: 'City Tours',
-      description: 'Personalized luxury tours with knowledgeable chauffeurs showcasing the best of the city.',
+      title: "Passeios pela Cidade",
+      description:
+        "Passeios de luxo personalizados com motoristas experientes que mostram o melhor da cidade.",
       features: [
-        'Customizable itineraries',
-        'Local expertise',
-        'Flexible duration',
-        'VIP access options',
+        "Itinerários personalizáveis",
+        "Conhecimento local",
+        "Duração flexível",
+        "Opções de acesso VIP",
       ],
     },
     {
       icon: Clock,
-      title: 'Hourly Charter',
-      description: 'Flexible hourly service for multiple stops, shopping trips, or a full day at your disposal.',
+      title: "Locação por Hora",
+      description:
+        "Serviço flexível por hora para múltiplas paradas, passeios de compras ou um dia inteiro à sua disposição.",
       features: [
-        'Minimum 3 hours',
-        'Wait time included',
-        'Route flexibility',
-        'Dedicated vehicle',
+        "Mínimo de 3 horas",
+        "Tempo de espera incluído",
+        "Flexibilidade de rota",
+        "Veículo dedicado",
       ],
     },
   ];
@@ -75,9 +81,12 @@ export function Services() {
       <section className="bg-slate-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="text-5xl sm:text-6xl font-bold mb-6">Our Services</h1>
+            <h1 className="text-5xl sm:text-6xl font-bold mb-6">
+              Nossos Serviços
+            </h1>
             <p className="text-xl text-slate-300 leading-relaxed">
-              Comprehensive transportation solutions tailored to your needs, delivered with uncompromising quality and attention to detail.
+              Soluções de transporte abrangentes, adaptadas às suas
+              necessidades, entregues com qualidade e atenção aos detalhes.
             </p>
           </div>
         </div>
@@ -110,7 +119,9 @@ export function Services() {
                         <div className="flex-shrink-0 h-5 w-5 rounded-full bg-slate-200 group-hover:bg-slate-900 flex items-center justify-center mr-3 mt-0.5 transition-colors">
                           <div className="h-1.5 w-1.5 rounded-full bg-slate-600 group-hover:bg-white transition-colors"></div>
                         </div>
-                        <span className="text-slate-700 text-sm">{feature}</span>
+                        <span className="text-slate-700 text-sm">
+                          {feature}
+                        </span>
                       </li>
                     ))}
                   </ul>
@@ -125,13 +136,15 @@ export function Services() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-slate-900 rounded-2xl p-12 text-center text-white">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-              Need a Custom Solution?
+              Precisa de uma solução personalizada?
             </h2>
             <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-              We specialize in creating bespoke transportation experiences. Let us design a service package that perfectly fits your requirements.
+              Especializamos em criar experiências de transporte sob medida.
+              Deixe-nos desenhar um pacote de serviço que se ajuste
+              perfeitamente às suas necessidades.
             </p>
             <button className="px-8 py-4 bg-white text-slate-900 rounded-lg hover:bg-slate-100 transition-colors font-semibold text-lg">
-              Contact Our Team
+              Contate nossa equipe
             </button>
           </div>
         </div>
