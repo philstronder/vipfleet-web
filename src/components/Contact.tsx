@@ -1,5 +1,6 @@
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { useState } from "react";
+import { useTranslation } from "../i18n";
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -10,6 +11,7 @@ export function Contact() {
     date: "",
     message: "",
   });
+  const { t } = useTranslation();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -32,13 +34,8 @@ export function Contact() {
       <section className="bg-slate-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="text-5xl sm:text-6xl font-bold mb-6">
-              Fale Conosco
-            </h1>
-            <p className="text-xl text-slate-300 leading-relaxed">
-              Pronto para experimentar transporte de luxo? Entre em contato com
-              nossa equipe ou reserve sua viagem hoje.
-            </p>
+            <h1 className="text-5xl sm:text-6xl font-bold mb-6">{t("contact.title")}</h1>
+            <p className="text-xl text-slate-300 leading-relaxed">{t("contact.lead")}</p>
           </div>
         </div>
       </section>
@@ -48,18 +45,11 @@ export function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
               <div className="bg-white rounded-xl border-2 border-slate-200 p-8">
-                <h2 className="text-3xl font-bold text-slate-900 mb-6">
-                  Solicitar Orçamento
-                </h2>
+                <h2 className="text-3xl font-bold text-slate-900 mb-6">{t("contact.requestQuote")}</h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label
-                        htmlFor="name"
-                        className="block text-sm font-semibold text-slate-900 mb-2"
-                      >
-                        Nome Completo *
-                      </label>
+                      <label htmlFor="name" className="block text-sm font-semibold text-slate-900 mb-2">{t("contact.fullName")}</label>
                       <input
                         type="text"
                         id="name"
@@ -71,12 +61,7 @@ export function Contact() {
                       />
                     </div>
                     <div>
-                      <label
-                        htmlFor="email"
-                        className="block text-sm font-semibold text-slate-900 mb-2"
-                      >
-                        Endereço de e-mail *
-                      </label>
+                      <label htmlFor="email" className="block text-sm font-semibold text-slate-900 mb-2">{t("contact.email")}</label>
                       <input
                         type="email"
                         id="email"
@@ -91,12 +76,7 @@ export function Contact() {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label
-                        htmlFor="phone"
-                        className="block text-sm font-semibold text-slate-900 mb-2"
-                      >
-                        Telefone *
-                      </label>
+                      <label htmlFor="phone" className="block text-sm font-semibold text-slate-900 mb-2">{t("contact.phone")}</label>
                       <input
                         type="tel"
                         id="phone"
@@ -108,12 +88,7 @@ export function Contact() {
                       />
                     </div>
                     <div>
-                      <label
-                        htmlFor="service"
-                        className="block text-sm font-semibold text-slate-900 mb-2"
-                      >
-                        Tipo de Serviço *
-                      </label>
+                      <label htmlFor="service" className="block text-sm font-semibold text-slate-900 mb-2">{t("contact.serviceType")}</label>
                       <select
                         id="service"
                         name="service"
@@ -122,26 +97,19 @@ export function Contact() {
                         required
                         className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:border-slate-900 focus:outline-none transition-colors"
                       >
-                        <option value="">Selecione um serviço</option>
-                        <option value="corporate">
-                          Transporte Corporativo
-                        </option>
-                        <option value="airport">Traslado Aeroportuário</option>
-                        <option value="events">Eventos Especiais</option>
-                        <option value="group">Transporte de Grupos</option>
-                        <option value="tours">Passeios pela Cidade</option>
-                        <option value="hourly">Locação por Hora</option>
+                        <option value="">{t("contact.selectService")}</option>
+                        <option value="corporate">{t("service.option.corporate")}</option>
+                        <option value="airport">{t("service.option.airport")}</option>
+                        <option value="events">{t("service.option.events")}</option>
+                        <option value="group">{t("service.option.group")}</option>
+                        <option value="tours">{t("service.option.tours")}</option>
+                        <option value="hourly">{t("service.option.hourly")}</option>
                       </select>
                     </div>
                   </div>
 
                   <div>
-                    <label
-                      htmlFor="date"
-                      className="block text-sm font-semibold text-slate-900 mb-2"
-                    >
-                      Data Preferida *
-                    </label>
+                    <label htmlFor="date" className="block text-sm font-semibold text-slate-900 mb-2">{t("contact.date")}</label>
                     <input
                       type="date"
                       id="date"
@@ -154,12 +122,7 @@ export function Contact() {
                   </div>
 
                   <div>
-                    <label
-                      htmlFor="message"
-                      className="block text-sm font-semibold text-slate-900 mb-2"
-                    >
-                      Detalhes Adicionais
-                    </label>
+                    <label htmlFor="message" className="block text-sm font-semibold text-slate-900 mb-2">{t("contact.details")}</label>
                     <textarea
                       id="message"
                       name="message"
@@ -167,34 +130,25 @@ export function Contact() {
                       onChange={handleChange}
                       rows={4}
                       className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:border-slate-900 focus:outline-none transition-colors resize-none"
-                      placeholder="Please provide any additional information about your transportation needs..."
+                        placeholder={t("contact.form.detailsPlaceholder")}
                     />
                   </div>
 
-                  <button
-                    type="submit"
-                    className="w-full px-8 py-4 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-colors font-semibold text-lg"
-                  >
-                    Enviar Solicitação
-                  </button>
+                  <button type="submit" className="w-full px-8 py-4 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-colors font-semibold text-lg">{t("contact.submit")}</button>
                 </form>
               </div>
             </div>
 
             <div className="space-y-8">
               <div className="bg-slate-50 rounded-xl p-8">
-                <h3 className="text-2xl font-bold text-slate-900 mb-6">
-                  Fale Conosco
-                </h3>
+                <h3 className="text-2xl font-bold text-slate-900 mb-6">{t("contact.sidebar.title")}</h3>
                 <div className="space-y-6">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 p-3 bg-slate-900 rounded-lg">
                       <Phone className="h-6 w-6 text-white" />
                     </div>
                     <div className="ml-4">
-                      <div className="text-sm font-semibold text-slate-900 mb-1">
-                        Telefone
-                      </div>
+                      <div className="text-sm font-semibold text-slate-900 mb-1">{t("contact.sidebar.phoneTitle")}</div>
                       <div className="text-slate-600">+1 (555) 123-4567</div>
                       <div className="text-slate-600">+1 (555) 765-4321</div>
                     </div>
@@ -205,13 +159,9 @@ export function Contact() {
                       <Mail className="h-6 w-6 text-white" />
                     </div>
                     <div className="ml-4">
-                      <div className="text-sm font-semibold text-slate-900 mb-1">
-                        E-mail
-                      </div>
+                      <div className="text-sm font-semibold text-slate-900 mb-1">{t("contact.sidebar.emailTitle")}</div>
                       <div className="text-slate-600">info@vipfleet.com</div>
-                      <div className="text-slate-600">
-                        bookings@vipfleet.com
-                      </div>
+                      <div className="text-slate-600">bookings@vipfleet.com</div>
                     </div>
                   </div>
 
@@ -220,15 +170,14 @@ export function Contact() {
                       <MapPin className="h-6 w-6 text-white" />
                     </div>
                     <div className="ml-4">
-                      <div className="text-sm font-semibold text-slate-900 mb-1">
-                        Localização
-                      </div>
+                      <div className="text-sm font-semibold text-slate-900 mb-1">{t("contact.sidebar.locationTitle")}</div>
                       <div className="text-slate-600">
-                        123 Executive Drive
-                        <br />
-                        Suite 500
-                        <br />
-                        New York, NY 10001
+                        {t("contact.sidebar.address").split("\n").map((line, i) => (
+                          <span key={i}>
+                            {line}
+                            <br />
+                          </span>
+                        ))}
                       </div>
                     </div>
                   </div>
@@ -238,13 +187,14 @@ export function Contact() {
                       <Clock className="h-6 w-6 text-white" />
                     </div>
                     <div className="ml-4">
-                      <div className="text-sm font-semibold text-slate-900 mb-1">
-                        Horário
-                      </div>
+                      <div className="text-sm font-semibold text-slate-900 mb-1">{t("contact.sidebar.hoursTitle")}</div>
                       <div className="text-slate-600">
-                        24/7 Service Available
-                        <br />
-                        Office: Mon-Fri, 8am-6pm
+                        {t("contact.sidebar.hoursText").split("\n").map((line, i) => (
+                          <span key={i}>
+                            {line}
+                            <br />
+                          </span>
+                        ))}
                       </div>
                     </div>
                   </div>
@@ -252,13 +202,8 @@ export function Contact() {
               </div>
 
               <div className="bg-slate-900 rounded-xl p-8 text-white">
-                <h3 className="text-xl font-bold mb-3">
-                  Reservas de Emergência
-                </h3>
-                <p className="text-slate-300 mb-4">
-                  Precisa de assistência imediata? Nossa equipe de despacho está
-                  disponível 24/7.
-                </p>
+                <h3 className="text-xl font-bold mb-3">{t("contact.emergency.title")}</h3>
+                <p className="text-slate-300 mb-4">{t("contact.emergency.text")}</p>
                 <div className="text-2xl font-bold">+1 (555) 999-0000</div>
               </div>
             </div>

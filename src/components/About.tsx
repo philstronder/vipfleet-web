@@ -1,38 +1,37 @@
 import { Award, Target, Heart, TrendingUp } from "lucide-react";
+import { useTranslation } from "../i18n";
 
 export function About() {
+  const { t } = useTranslation();
+
   const values = [
     {
       icon: Award,
-      title: "Excelência",
-      description:
-        "Mantemos os mais altos padrões em todos os aspectos da entrega de nossos serviços.",
+      titleKey: "about.value.1.title",
+      descKey: "about.value.1.desc",
     },
     {
       icon: Target,
-      title: "Precisão",
-      description:
-        "Pontualidade e atenção aos detalhes estão no centro de tudo o que fazemos.",
+      titleKey: "about.value.2.title",
+      descKey: "about.value.2.desc",
     },
     {
       icon: Heart,
-      title: "Integridade",
-      description:
-        "Construímos relacionamentos duradouros por meio da confiança, transparência e confiabilidade.",
+      titleKey: "about.value.3.title",
+      descKey: "about.value.3.desc",
     },
     {
       icon: TrendingUp,
-      title: "Inovação",
-      description:
-        "Melhorando continuamente nossos serviços com tecnologia de ponta.",
+      titleKey: "about.value.4.title",
+      descKey: "about.value.4.desc",
     },
   ];
 
   const stats = [
-    { number: "12+", label: "Anos de Experiência" },
-    { number: "50K+", label: "Clientes Satisfeitos" },
-    { number: "98%", label: "Taxa de Pontualidade" },
-    { number: "45+", label: "Veículos de Luxo" },
+    { number: "12+", labelKey: "about.stats.years" },
+    { number: "50K+", labelKey: "about.stats.clients" },
+    { number: "98%", labelKey: "about.stats.ontime" },
+    { number: "45+", labelKey: "about.stats.vehicles" },
   ];
 
   return (
@@ -40,11 +39,8 @@ export function About() {
       <section className="bg-slate-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="text-5xl sm:text-6xl font-bold mb-6">Sobre Nós</h1>
-            <p className="text-xl text-slate-300 leading-relaxed">
-              Definindo o padrão para transporte executivo com compromisso
-              inabalável com a excelência desde 2012.
-            </p>
+            <h1 className="text-5xl sm:text-6xl font-bold mb-6">{t("about.title")}</h1>
+            <p className="text-xl text-slate-300 leading-relaxed">{t("about.lead")}</p>
           </div>
         </div>
       </section>
@@ -53,34 +49,18 @@ export function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-slate-900 mb-6">
-                Nossa História
-              </h2>
+              <h2 className="text-4xl font-bold text-slate-900 mb-6">{t("about.ourStory.title")}</h2>
               <div className="space-y-4 text-lg text-slate-600 leading-relaxed">
-                <p>
-                  Fundada em 2012, a Vip Fleet surgiu com uma visão simples:
-                  oferecer a executivos e clientes ilustres uma experiência de
-                  transporte que corresponda aos seus padrões de excelência.
-                </p>
-                <p>
-                  O que começou com uma pequena frota de três veículos cresceu e
-                  se tornou o serviço de transporte executivo mais confiável da
-                  região, com mais de 45 veículos de luxo e uma equipe de
-                  motoristas profissionais altamente treinados.
-                </p>
-                <p>
-                  Nosso sucesso se baseia nos relacionamentos que cultivamos com
-                  nossos clientes, muitos dos quais estão conosco desde o
-                  primeiro dia. Não oferecemos apenas transporte — entregamos
-                  tranquilidade.
-                </p>
+                <p>{t("about.story.p1")}</p>
+                <p>{t("about.story.p2")}</p>
+                <p>{t("about.story.p3")}</p>
               </div>
             </div>
             <div className="relative">
               <div className="aspect-square rounded-2xl bg-slate-900 overflow-hidden shadow-2xl">
-                  <img
+                <img
                   src="https://images.pexels.com/photos/3802508/pexels-photo-3802508.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="Nossa equipe"
+                  alt={t("about.ourStory.title")}
                   className="w-full h-full object-cover opacity-90"
                 />
               </div>
@@ -94,10 +74,8 @@ export function About() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-5xl font-bold text-slate-900 mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-slate-600 font-medium">{stat.label}</div>
+                <div className="text-5xl font-bold text-slate-900 mb-2">{stat.number}</div>
+                <div className="text-slate-600 font-medium">{t(stat.labelKey)}</div>
               </div>
             ))}
           </div>
@@ -107,13 +85,8 @@ export function About() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              Nossos Valores
-            </h2>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Os princípios que guiam cada decisão que tomamos e cada serviço
-              que entregamos.
-            </p>
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">{t("about.values.title")}</h2>
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto">{t("about.values.lead")}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => {
@@ -123,12 +96,8 @@ export function About() {
                   <div className="inline-flex p-4 bg-slate-900 rounded-xl mb-4">
                     <Icon className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-3">
-                    {value.title}
-                  </h3>
-                  <p className="text-slate-600 leading-relaxed">
-                    {value.description}
-                  </p>
+                  <h3 className="text-xl font-bold text-slate-900 mb-3">{t(value.titleKey)}</h3>
+                  <p className="text-slate-600 leading-relaxed">{t(value.descKey)}</p>
                 </div>
               );
             })}
@@ -141,34 +110,17 @@ export function About() {
           <div className="bg-slate-900 rounded-2xl overflow-hidden">
             <div className="grid grid-cols-1 lg:grid-cols-2">
               <div className="p-12">
-                <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-                  Nosso Compromisso
-                </h2>
+                <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">{t("about.commitment.title")}</h2>
                 <div className="space-y-4 text-slate-300 leading-relaxed">
-                  <p>
-                    Cada membro da nossa equipe passa por treinamento rigoroso e
-                    verificações de antecedentes. Nossos motoristas não são
-                    apenas condutores — são profissionais de hospitalidade
-                    dedicados a garantir seu conforto e segurança.
-                  </p>
-                  <p>
-                    Investimos continuamente em nossa frota, mantendo cada
-                    veículo segundo as especificações do fabricante e além.
-                    Nossos veículos são limpos profundamente e inspecionados
-                    após cada viagem.
-                  </p>
-                  <p>
-                    Sua satisfação é nossa medida de sucesso. Estamos
-                    disponíveis 24/7 para garantir que suas necessidades de
-                    transporte sejam atendidas com profissionalismo e atenção
-                    aos detalhes.
-                  </p>
+                  <p>{t("about.commitment.p1")}</p>
+                  <p>{t("about.commitment.p2")}</p>
+                  <p>{t("about.commitment.p3")}</p>
                 </div>
               </div>
               <div className="relative h-64 lg:h-auto">
                 <img
                   src="https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="Commitment"
+                  alt={t("about.commitment.title")}
                   className="w-full h-full object-cover"
                 />
               </div>
