@@ -13,9 +13,62 @@ export function Contact() {
   });
   const { t } = useTranslation();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [successMessage, setSuccessMessage] = useState<string | null>(null);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    setIsSubmitting(true);
+    setSuccessMessage(null);
+    setErrorMessage(null);
+
+    try {
+      const endpoint =
+        "https://formsubmit.co/ajax/f4c38cf81794ef2cb17f5da9a3282ca22";
+      const payload = {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        service: formData.service,
+        date: formData.date,
+        message: formData.message,
+        _subject: "New contact request from vipfleet website",
+        _captcha: "false",
+      } as Record<string, string>;
+
+      const res = await fetch(endpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!res.ok) {
+        const errData = await res.json().catch(() => null);
+        const msg =
+          errData?.message || `Request failed with status ${res.status}`;
+        setErrorMessage(msg);
+      } else {
+        setSuccessMessage(
+          t("contact.form.success") || "Message sent. We'll contact you soon."
+        );
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          service: "",
+          date: "",
+          message: "",
+        });
+      }
+    } catch (err: unknown) {
+      const message = err instanceof Error ? err.message : String(err);
+      setErrorMessage(message || "An unexpected error occurred.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -182,11 +235,30 @@ export function Contact() {
                     />
                   </div>
 
+                  {successMessage && (
+                    <div className="p-4 rounded-lg bg-green-50 text-green-800">
+                      {successMessage}
+                    </div>
+                  )}
+
+                  {errorMessage && (
+                    <div className="p-4 rounded-lg bg-red-50 text-red-800">
+                      {errorMessage}
+                    </div>
+                  )}
+
                   <button
                     type="submit"
-                    className="w-full px-8 py-4 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-colors font-semibold text-lg"
+                    disabled={isSubmitting}
+                    className={`w-full px-8 py-4 rounded-lg transition-colors font-semibold text-lg ${
+                      isSubmitting
+                        ? "bg-slate-400 text-white cursor-not-allowed"
+                        : "bg-slate-900 text-white hover:bg-slate-800"
+                    }`}
                   >
-                    {t("contact.submit")}
+                    {isSubmitting
+                      ? t("contact.sending") || "Sending..."
+                      : t("contact.submit")}
                   </button>
                 </form>
               </div>

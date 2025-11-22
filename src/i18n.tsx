@@ -173,6 +173,8 @@ const translations: Translations = {
   },
   "contact.date": { en: "Preferred Date *", pt: "Data Preferida *" },
   "contact.details": { en: "Additional Details", pt: "Detalhes Adicionais" },
+  "contact.sending": { en: "Sending", pt: "Enviando" },
+  "contact.form.success": { en: "Success!", pt: "Dados enviados com sucesso!" },
   "service.option.corporate": {
     en: "Corporate Transportation",
     pt: "Transporte Corporativo",
