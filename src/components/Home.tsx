@@ -1,5 +1,6 @@
 import { ArrowRight, Clock, Shield, Star, Users } from "lucide-react";
 import { useTranslation } from "../i18n";
+import bmwImage from "../assets/pexels-alex-kviatkouski-1461196-8662678.jpg";
 
 interface HomeProps {
   onNavigate: (section: string) => void;
@@ -55,10 +56,10 @@ export function Home({ onNavigate }: HomeProps) {
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </button>
               <button
-                onClick={() => onNavigate("fleet")}
+                onClick={() => onNavigate("services")}
                 className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-slate-900 transition-all font-semibold text-lg"
               >
-                {t("home.viewFleet")}
+                {t("home.viewServices")}
               </button>
             </div>
           </div>
@@ -98,14 +99,18 @@ export function Home({ onNavigate }: HomeProps) {
               <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-6">
                 {t("home.why.title")}
               </h2>
-              <p className="text-lg text-slate-600 mb-8 leading-relaxed">{t("home.why.lead")}</p>
+              <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+                {t("home.why.lead")}
+              </p>
               <ul className="space-y-4">
                 {[1, 2, 3, 4, 5].map((i) => (
                   <li key={i} className="flex items-start">
                     <div className="flex-shrink-0 h-6 w-6 rounded-full bg-slate-900 flex items-center justify-center mr-3 mt-0.5">
                       <div className="h-2 w-2 rounded-full bg-white"></div>
                     </div>
-                    <span className="text-slate-700 text-lg">{t(`home.why.item.${i}`)}</span>
+                    <span className="text-slate-700 text-lg">
+                      {t(`home.why.item.${i}`)}
+                    </span>
                   </li>
                 ))}
               </ul>
@@ -119,7 +124,7 @@ export function Home({ onNavigate }: HomeProps) {
             <div className="relative">
               <div className="aspect-square rounded-2xl bg-slate-900 overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src={bmwImage}
                   alt={t("home.imageAlt")}
                   className="w-full h-full object-cover opacity-90"
                 />

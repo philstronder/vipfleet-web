@@ -25,7 +25,7 @@ export function Navigation({ activeSection, onNavigate }: NavigationProps) {
   const navItems = [
     { id: "home", label: t("nav.home") },
     { id: "services", label: t("nav.services") },
-    { id: "fleet", label: t("nav.fleet") },
+    // { id: "fleet", label: t("nav.fleet") },
     { id: "about", label: t("nav.about") },
     { id: "contact", label: t("nav.contact") },
   ];

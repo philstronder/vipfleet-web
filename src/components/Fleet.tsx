@@ -96,8 +96,12 @@ export function Fleet() {
       <section className="bg-slate-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="text-5xl sm:text-6xl font-bold mb-6">{t("fleet.title")}</h1>
-            <p className="text-xl text-slate-300 leading-relaxed">{t("fleet.lead")}</p>
+            <h1 className="text-5xl sm:text-6xl font-bold mb-6">
+              {t("fleet.title")}
+            </h1>
+            <p className="text-xl text-slate-300 leading-relaxed">
+              {t("fleet.lead")}
+            </p>
           </div>
         </div>
       </section>
@@ -129,11 +133,15 @@ export function Fleet() {
                   <div className="flex items-center space-x-6 mb-6 pb-6 border-b border-slate-200">
                     <div className="flex items-center">
                       <Users className="h-5 w-5 text-slate-400 mr-2" />
-                      <span className="text-slate-600">{vehicle.passengers} {t("fleet.passengers")}</span>
+                      <span className="text-slate-600">
+                        {vehicle.passengers} {t("fleet.passengers")}
+                      </span>
                     </div>
                     <div className="flex items-center">
                       <Briefcase className="h-5 w-5 text-slate-400 mr-2" />
-                      <span className="text-slate-600">{vehicle.luggage} {t("fleet.luggage")}</span>
+                      <span className="text-slate-600">
+                        {vehicle.luggage} {t("fleet.luggage")}
+                      </span>
                     </div>
                   </div>
                   <div className="space-y-3">
@@ -154,19 +162,33 @@ export function Fleet() {
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-slate-900 rounded-2xl p-12 text-center text-white">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">{t("fleet.includes.title")}</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              {t("fleet.includes.title")}
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
               <div>
-                <div className="text-4xl font-bold mb-2">{t("fleet.includes.stat.1.value")}</div>
-                <div className="text-slate-300">{t("fleet.includes.stat.1.label")}</div>
+                <div className="text-4xl font-bold mb-2">
+                  {t("fleet.includes.stat.1.value")}
+                </div>
+                <div className="text-slate-300">
+                  {t("fleet.includes.stat.1.label")}
+                </div>
               </div>
               <div>
-                <div className="text-4xl font-bold mb-2">{t("fleet.includes.stat.2.value")}</div>
-                <div className="text-slate-300">{t("fleet.includes.stat.2.label")}</div>
+                <div className="text-4xl font-bold mb-2">
+                  {t("fleet.includes.stat.2.value")}
+                </div>
+                <div className="text-slate-300">
+                  {t("fleet.includes.stat.2.label")}
+                </div>
               </div>
               <div>
-                <div className="text-4xl font-bold mb-2">{t("fleet.includes.stat.3.value")}</div>
-                <div className="text-slate-300">{t("fleet.includes.stat.3.label")}</div>
+                <div className="text-4xl font-bold mb-2">
+                  {t("fleet.includes.stat.3.value")}
+                </div>
+                <div className="text-slate-300">
+                  {t("fleet.includes.stat.3.label")}
+                </div>
               </div>
             </div>
           </div>

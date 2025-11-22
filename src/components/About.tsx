@@ -1,5 +1,7 @@
 import { Award, Target, Heart, TrendingUp } from "lucide-react";
 import { useTranslation } from "../i18n";
+import blackSuv from "../assets/pexels-saif-allah-dawoud-576915631-33729335.jpg";
+import chauffeur from "../assets/pexels-453707837-15774577.jpg";
 
 export function About() {
   const { t } = useTranslation();
@@ -28,10 +30,10 @@ export function About() {
   ];
 
   const stats = [
-    { number: "12+", labelKey: "about.stats.years" },
-    { number: "50K+", labelKey: "about.stats.clients" },
+    { number: "10+", labelKey: "about.stats.years" },
+    { number: "12K+", labelKey: "about.stats.clients" },
     { number: "98%", labelKey: "about.stats.ontime" },
-    { number: "45+", labelKey: "about.stats.vehicles" },
+    { number: "12+", labelKey: "about.stats.vehicles" },
   ];
 
   return (
@@ -39,8 +41,12 @@ export function About() {
       <section className="bg-slate-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="text-5xl sm:text-6xl font-bold mb-6">{t("about.title")}</h1>
-            <p className="text-xl text-slate-300 leading-relaxed">{t("about.lead")}</p>
+            <h1 className="text-5xl sm:text-6xl font-bold mb-6">
+              {t("about.title")}
+            </h1>
+            <p className="text-xl text-slate-300 leading-relaxed">
+              {t("about.lead")}
+            </p>
           </div>
         </div>
       </section>
@@ -49,7 +55,9 @@ export function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-slate-900 mb-6">{t("about.ourStory.title")}</h2>
+              <h2 className="text-4xl font-bold text-slate-900 mb-6">
+                {t("about.ourStory.title")}
+              </h2>
               <div className="space-y-4 text-lg text-slate-600 leading-relaxed">
                 <p>{t("about.story.p1")}</p>
                 <p>{t("about.story.p2")}</p>
@@ -59,7 +67,7 @@ export function About() {
             <div className="relative">
               <div className="aspect-square rounded-2xl bg-slate-900 overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.pexels.com/photos/3802508/pexels-photo-3802508.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src={blackSuv}
                   alt={t("about.ourStory.title")}
                   className="w-full h-full object-cover opacity-90"
                 />
@@ -74,8 +82,12 @@ export function About() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-5xl font-bold text-slate-900 mb-2">{stat.number}</div>
-                <div className="text-slate-600 font-medium">{t(stat.labelKey)}</div>
+                <div className="text-5xl font-bold text-slate-900 mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-slate-600 font-medium">
+                  {t(stat.labelKey)}
+                </div>
               </div>
             ))}
           </div>
@@ -85,8 +97,12 @@ export function About() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">{t("about.values.title")}</h2>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto">{t("about.values.lead")}</p>
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">
+              {t("about.values.title")}
+            </h2>
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+              {t("about.values.lead")}
+            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => {
@@ -96,8 +112,12 @@ export function About() {
                   <div className="inline-flex p-4 bg-slate-900 rounded-xl mb-4">
                     <Icon className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-3">{t(value.titleKey)}</h3>
-                  <p className="text-slate-600 leading-relaxed">{t(value.descKey)}</p>
+                  <h3 className="text-xl font-bold text-slate-900 mb-3">
+                    {t(value.titleKey)}
+                  </h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    {t(value.descKey)}
+                  </p>
                 </div>
               );
             })}
@@ -110,7 +130,9 @@ export function About() {
           <div className="bg-slate-900 rounded-2xl overflow-hidden">
             <div className="grid grid-cols-1 lg:grid-cols-2">
               <div className="p-12">
-                <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">{t("about.commitment.title")}</h2>
+                <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+                  {t("about.commitment.title")}
+                </h2>
                 <div className="space-y-4 text-slate-300 leading-relaxed">
                   <p>{t("about.commitment.p1")}</p>
                   <p>{t("about.commitment.p2")}</p>
@@ -119,7 +141,7 @@ export function About() {
               </div>
               <div className="relative h-64 lg:h-auto">
                 <img
-                  src="https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src={chauffeur}
                   alt={t("about.commitment.title")}
                   className="w-full h-full object-cover"
                 />
