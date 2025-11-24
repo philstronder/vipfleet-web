@@ -278,7 +278,7 @@ export function Contact() {
                       <div className="text-sm font-semibold text-slate-900 mb-1">
                         {t("contact.sidebar.phoneTitle")}
                       </div>
-                      <div className="text-slate-600">+55 (21) 2255-7555</div>
+                      <div className="text-slate-600">+55 (21) 98218-5825</div>
                       {/* <div className="text-slate-600">+1 (555) 765-4321</div> */}
                     </div>
                   </div>
@@ -291,9 +291,9 @@ export function Contact() {
                       <div className="text-sm font-semibold text-slate-900 mb-1">
                         {t("contact.sidebar.emailTitle")}
                       </div>
-                      <div className="text-slate-600">info@vipfleet.com</div>
+                      <div className="text-slate-600">info@vipfleet.com.br</div>
                       <div className="text-slate-600">
-                        bookings@vipfleet.com
+                        bookings@vipfleet.com.br
                       </div>
                     </div>
                   </div>
