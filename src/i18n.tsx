@@ -99,8 +99,8 @@ const translations: Translations = {
     pt: "Fundada em 2012, a Vip Fleet surgiu com uma visão simples: oferecer a executivos e clientes ilustres uma experiência de transporte que corresponda aos seus padrões de excelência.",
   },
   "about.story.p2": {
-    en: "What began with a small fleet of three vehicles has grown into the region's most trusted executive transport service, with over 45 luxury vehicles and a team of highly trained professional chauffeurs.",
-    pt: "O que começou com uma pequena frota de três veículos cresceu e se tornou o serviço de transporte executivo mais confiável da região, com mais de 45 veículos de luxo e uma equipe de motoristas profissionais altamente treinados.",
+    en: "What began with a small fleet of three vehicles has grown into the region's most trusted executive transport service, with over 12 luxury vehicles and a team of highly trained professional chauffeurs.",
+    pt: "O que começou com uma pequena frota de três veículos cresceu e se tornou o serviço de transporte executivo mais confiável da região, com mais de 12 veículos de luxo e uma equipe de motoristas profissionais altamente treinados.",
   },
   "about.story.p3": {
     en: "Our success is built on the relationships we've cultivated with our clients, many of whom have been with us since day one. We don't just provide transportation—we deliver peace of mind.",
