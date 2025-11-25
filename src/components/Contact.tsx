@@ -23,8 +23,9 @@ export function Contact() {
     setErrorMessage(null);
 
     try {
-      const endpoint =
-        "https://formsubmit.co/ajax/f4c38cf81794ef2cb17f5da9a3282ca22";
+      // const endpoint =
+      //   "https://formsubmit.co/ajax/f4c38cf81794ef2cb17f5da9a3282ca22";
+      const endpoint = "https://formsubmit.co/ajax/felipevale@gmail.com";
       const payload = {
         name: formData.name,
         email: formData.email,
