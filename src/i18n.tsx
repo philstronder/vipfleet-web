@@ -86,17 +86,17 @@ const translations: Translations = {
 
   "about.title": { en: "About Us", pt: "Sobre Nós" },
   "about.story": {
-    en: `Founded in 2012, Vip Fleet emerged from a simple vision: to provide executives and distinguished clients with a transportation experience that matches their standards of excellence.`,
-    pt: `Fundada em 2012, a Vip Fleet surgiu com uma visão simples: oferecer a executivos e clientes ilustres uma experiência de transporte que corresponda aos seus padrões de excelência.`,
+    en: `Founded in 2016, Vip Fleet emerged from a simple vision: to provide executives and distinguished clients with a transportation experience that matches their standards of excellence.`,
+    pt: `Fundada em 2016, a Vip Fleet surgiu com uma visão simples: oferecer a executivos e clientes ilustres uma experiência de transporte que corresponda aos seus padrões de excelência.`,
   },
   "about.lead": {
-    en: "Setting the standard for executive transportation with unwavering commitment to excellence since 2012.",
-    pt: "Definindo o padrão para transporte executivo com compromisso inabalável com a excelência desde 2012.",
+    en: "Setting the standard for executive transportation with unwavering commitment to excellence since 2016.",
+    pt: "Definindo o padrão para transporte executivo com compromisso inabalável com a excelência desde 2016.",
   },
   "about.ourStory.title": { en: "Our Story", pt: "Nossa História" },
   "about.story.p1": {
-    en: "Founded in 2012, Vip Fleet emerged from a simple vision: to provide executives and distinguished clients with a transportation experience that matches their standards of excellence.",
-    pt: "Fundada em 2012, a Vip Fleet surgiu com uma visão simples: oferecer a executivos e clientes ilustres uma experiência de transporte que corresponda aos seus padrões de excelência.",
+    en: "Founded in 2016, Vip Fleet emerged from a simple vision: to provide executives and distinguished clients with a transportation experience that matches their standards of excellence.",
+    pt: "Fundada em 2016, a Vip Fleet surgiu com uma visão simples: oferecer a executivos e clientes ilustres uma experiência de transporte que corresponda aos seus padrões de excelência.",
   },
   "about.story.p2": {
     en: "What began with a small fleet of three vehicles has grown into the region's most trusted executive transport service, with over 12 luxury vehicles and a team of highly trained professional chauffeurs.",
