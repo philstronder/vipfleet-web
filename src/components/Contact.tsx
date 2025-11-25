@@ -23,9 +23,9 @@ export function Contact() {
     setErrorMessage(null);
 
     try {
-      // const endpoint =
-      //   "https://formsubmit.co/ajax/f4c38cf81794ef2cb17f5da9a3282ca22";
-      const endpoint = "https://formsubmit.co/ajax/felipevale@gmail.com";
+      const endpoint =
+        "https://formsubmit.co/ajax/f4c38cf81794ef2cb17f5da9a3282ca22";
+
       const payload = {
         name: formData.name,
         email: formData.email,
@@ -33,7 +33,7 @@ export function Contact() {
         service: formData.service,
         date: formData.date,
         message: formData.message,
-        _subject: "New contact request from vipfleet website",
+        _subject: "VIP Fleet - New Contact Form Submission",
         _captcha: "false",
       } as Record<string, string>;
 
