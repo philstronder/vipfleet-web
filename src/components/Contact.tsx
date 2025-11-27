@@ -101,7 +101,7 @@ export function Contact() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            <div className="lg:col-span-2">
+            <div className="lg:col-span-2" style={{ display: "none" }}>
               <div className="bg-white rounded-xl border-2 border-slate-200 p-8">
                 <h2 className="text-3xl font-bold text-slate-900 mb-6">
                   {t("contact.requestQuote")}
@@ -293,9 +293,9 @@ export function Contact() {
                         {t("contact.sidebar.emailTitle")}
                       </div>
                       <div className="text-slate-600">info@vipfleet.com.br</div>
-                      <div className="text-slate-600">
+                      {/* <div className="text-slate-600">
                         bookings@vipfleet.com.br
-                      </div>
+                      </div> */}
                     </div>
                   </div>
 
